@@ -383,20 +383,20 @@ type MessageAllowedMentions struct {
 
 // A MessageAttachment stores data for message attachments.
 type MessageAttachment struct {
-	ID               string                 `json:"id,omitempty"`
+	ID               string                 `json:"id"`
 	URL              string                 `json:"url,omitempty"`
 	ProxyURL         string                 `json:"proxy_url,omitempty"`
 	Filename         string                 `json:"filename,omitempty"`
+	Description      string                 `json:"description,omitempty"`
 	ContentType      string                 `json:"content_type,omitempty"`
 	Width            int                    `json:"width,omitempty"`
 	Height           int                    `json:"height,omitempty"`
 	Size             int                    `json:"size,omitempty"`
-	Description      string                 `json:"description,omitempty"`
 	Ephemeral        bool                   `json:"ephemeral,omitempty"`
+	UploadedFilename string                 `json:"uploaded_filename"`
+	Waveform         []byte                 `json:"waveform,omitempty"`
 	DurationSeconds  float64                `json:"duration_secs,omitempty"`
-	Waveform         string                 `json:"waveform,omitempty"`
 	Flags            MessageAttachmentFlags `json:"flags,omitempty"`
-	UploadedFilename string                 `json:"uploaded_filename,omitempty"`
 }
 
 // MessageAttachmentFlags is the flags of a message attachment.
