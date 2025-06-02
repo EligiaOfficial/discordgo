@@ -391,6 +391,7 @@ type MessageAttachment struct {
 	Width            int                    `json:"width,omitempty"`
 	Height           int                    `json:"height,omitempty"`
 	Size             int                    `json:"size,omitempty"`
+	Description      string                 `json:"description,omitempty"`
 	Ephemeral        bool                   `json:"ephemeral,omitempty"`
 	DurationSeconds  float64                `json:"duration_secs,omitempty"`
 	Waveform         string                 `json:"waveform,omitempty"`
